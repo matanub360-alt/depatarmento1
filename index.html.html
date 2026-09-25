@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angelus — Assistência Funeral Familiar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1E2A38;
+    --slate:#2E4356;
+    --ivory:#F5F1E8;
+    --brass:#A9814C;
+    --sage:#6F8069;
+    --line: rgba(30,42,56,0.14);
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--ivory); color:var(--ink);
+    font-family:'Public Sans', Arial, sans-serif; font-size:17px; line-height:1.6;
+  }
+  h1,h2,h3,.serif{font-family:'Newsreader', Georgia, serif; font-weight:500; color:var(--slate);}
+  a{color:inherit;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 32px;}
+
+  header{
+    position:sticky; top:env(safe-area-inset-top,0px); z-index:10;
+    background:rgba(245,241,232,0.92); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .navbar{display:flex; align-items:center; justify-content:space-between; padding:18px 32px; max-width:1040px; margin:0 auto;}
+  .brand{font-family:'Newsreader', serif; font-size:22px; letter-spacing:0.3px; color:var(--slate);}
+  nav a{margin-left:28px; text-decoration:none; font-size:15px; color:var(--ink); opacity:0.75;}
+  nav a:hover{opacity:1;}
+
+  .hero{padding:96px 0 80px; border-bottom:1px solid var(--line);}
+  .hero .kicker{color:var(--brass); font-size:15px; margin-bottom:18px;}
+  .hero h1{font-size:clamp(34px,5.5vw,56px); line-height:1.12; max-width:14ch; margin:0 0 26px;}
+  .hero p{max-width:52ch; font-size:19px; color:var(--slate); margin:0 0 34px;}
+  .btn{
+    display:inline-block; padding:14px 26px; background:var(--slate); color:var(--ivory);
+    text-decoration:none; border-radius:2px; font-size:15px; transition:background .2s;
+  }
+  .btn:hover{background:var(--ink);}
+  .btn.ghost{background:none; border:1px solid var(--slate); color:var(--slate); margin-left:14px;}
+
+  section{padding:72px 0; border-bottom:1px solid var(--line);}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:40px; margin-top:44px;}
+  @media (max-width:760px){.grid3{grid-template-columns:1fr;}}
+  .service h3{font-size:21px; margin:0 0 10px;}
+  .service p{color:var(--slate); font-size:15.5px; margin:0;}
+  .service .mark{width:34px; height:34px; border:1.5px solid var(--brass); border-radius:50%; margin-bottom:18px; position:relative;}
+  .service .mark::after{content:''; position:absolute; inset:9px; background:var(--brass); border-radius:50%;}
+
+  .about{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  @media (max-width:760px){.about{grid-template-columns:1fr;}}
+  .about h2{font-size:32px; margin:0 0 20px;}
+  .about p{color:var(--slate); margin:0 0 16px;}
+  .stat{border-top:1px solid var(--line); padding-top:16px; margin-top:24px;}
+  .stat .num{font-family:'Newsreader',serif; font-size:30px; color:var(--slate);}
+  .stat .lbl{font-size:14px; color:var(--brass);}
+
+  blockquote{
+    font-family:'Newsreader', serif; font-style:italic; font-size:26px; line-height:1.5;
+    max-width:32ch; margin:0 auto; text-align:center; color:var(--slate);
+  }
+  .quote-wrap{text-align:center;}
+  .quote-wrap cite{display:block; margin-top:22px; font-style:normal; font-size:14px; color:var(--brass);}
+
+  .contact{background:var(--slate); color:var(--ivory); border-bottom:none;}
+  .contact h2{color:var(--ivory);}
+  .contact-grid{display:grid; grid-template-columns:1.2fr 1fr; gap:56px;}
+  @media (max-width:760px){.contact-grid{grid-template-columns:1fr;}}
+  .contact p{color:rgba(245,241,232,0.8); max-width:44ch;}
+  .contact .btn{background:var(--brass); color:var(--ink);}
+  .contact .btn:hover{background:#c39a63;}
+  .info dl{margin:0;}
+  .info dt{font-size:13px; color:var(--brass); margin-top:18px;}
+  .info dd{margin:4px 0 0; font-size:15.5px;}
+
+  footer{padding:26px 0; text-align:center; font-size:13px; color:var(--slate); opacity:0.7;}
+
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="brand">Angelus</div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Assistência funeral familiar · Porto Alegre</div>
+    <h1>Cuidado e presença nos momentos que exigem os dois.</h1>
+    <p>A Angelus acompanha famílias antes, durante e depois da despedida — com planos pensados para dar tranquilidade e um atendimento humano quando ele mais importa.</p>
+    <a class="btn" href="#contato">Falar com a Angelus</a>
+    <a class="btn ghost" href="#servicos">Ver serviços</a>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <h2 class="serif" style="font-size:32px; margin:0;">Como acompanhamos sua família</h2>
+    <div class="grid3">
+      <div class="service">
+        <div class="mark"></div>
+        <h3>Planos funerários</h3>
+        <p>Planos individuais e familiares que organizam tudo com antecedência, sem sobrecarregar quem fica.</p>
+      </div>
+      <div class="service">
+        <div class="mark"></div>
+        <h3>Assistência 24 horas</h3>
+        <p>Equipe disponível a qualquer hora para orientar e cuidar de toda a parte prática do velório e sepultamento.</p>
+      </div>
+      <div class="service">
+        <div class="mark"></div>
+        <h3>Memorial e homenagem</h3>
+        <p>Espaço de memória para reunir a família, guardar lembranças e celebrar uma vida com dignidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap about">
+    <div>
+      <h2 class="serif">Uma equipe que trata sua família como a nossa</h2>
+      <p>A Angelus nasceu para tirar o peso da burocracia e da logística das mãos de quem está de luto. Cada detalhe — do primeiro telefonema ao acompanhamento nos dias seguintes — é conduzido com respeito e clareza.</p>
+      <p>Atendemos famílias em Porto Alegre e região, no Centro Histórico, com estrutura própria e parcerias que garantem agilidade em qualquer horário.</p>
+    </div>
+    <div>
+      <div class="stat"><div class="num">24h</div><div class="lbl">Atendimento disponível todos os dias</div></div>
+      <div class="stat"><div class="num">100%</div><div class="lbl">Acompanhamento familiar do início ao fim</div></div>
+      <div class="stat"><div class="num">1</div><div class="lbl">Ponto de contato para toda a família</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-wrap">
+  <div class="wrap">
+    <blockquote>"Não estar sozinho na hora mais difícil já é, para muitas famílias, o começo do consolo."</blockquote>
+    <cite>Equipe Angelus</cite>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="serif" style="font-size:30px;">Estamos disponíveis quando você precisar</h2>
+      <p>Fale com a Angelus para conhecer os planos ou solicitar atendimento imediato. Respondemos com agilidade, a qualquer hora.</p>
+      <a class="btn" href="https://www.angelus.com.br/memorial">Visitar o site oficial</a>
+    </div>
+    <div class="info">
+      <dl>
+        <dt>Endereço</dt>
+        <dd>R. Siqueira Campos, 1204, Loja 3 — Centro Histórico, Porto Alegre - RS, 90010-001</dd>
+        <dt>Site</dt>
+        <dd>angelus.com.br/memorial</dd>
+        <dt>Razão social</dt>
+        <dd>Angelus Assistência Funeral Familiar Ltda</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer>Angelus Assistência Funeral Familiar — Porto Alegre, RS</footer>
+
+</body>
+</html>
